@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmi:id="_V2_msWYzEe28-r5mBwKjOQ" name="mainsystemimp.OrganizationHttpClientResource" type="http:HttpClientConfiguration">
+  <identitySet xmi:id="_VrFlwGZAEe28-r5mBwKjOQ" appliesTo="namedResource" name="HttpClientIdentitySet" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_VrFlwWZAEe28-r5mBwKjOQ" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_VrFlwmZAEe28-r5mBwKjOQ" name="transport">
+        <id:IdentityReference xmi:id="_VrPWwGZAEe28-r5mBwKjOQ" URI="mainsystemimp.SSLClientResource" type="sslclient:SSLClientConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_V2_msmYzEe28-r5mBwKjOQ" useSSL="true" httpClientVersion="httpcomponents" retryCount="3" idleConnectionTimeout="3000" cmdExecutionIsolationStrategy="COUNT_BASED" cmdExecutionIsolationTimeout="10" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="50" cmdCircuitBreakerSleepWindow="100" cmdCircuitBreakerErrorThresholdPercentage="100" cmdMetricsRollingStatsTime="100" cmdMetricsRollingStatsNumBuckets="60000" cmdMetricsHealthSnapshotInterval="500" tpCoreSize="10" tpMaxQueueSize="60000" tpQueueSizeRejectionThreshold="6000" tpKeepAliveTime="1">
+    <tcpDetails xmi:id="_V2_ms2YzEe28-r5mBwKjOQ">
+      <substitutionBindings xmi:id="_cJITIGYzEe28-r5mBwKjOQ" template="host" propName="//CommonLog///HTTPConnection/Username"/>
+      <substitutionBindings xmi:id="_dvS_sGYzEe28-r5mBwKjOQ" template="port" propName="//CommonLog///HTTPConnection/PortEmpOrganization"/>
+    </tcpDetails>
+  </jndi:configuration>
+</jndi:namedResource>

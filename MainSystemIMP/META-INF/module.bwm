@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_SGaaMFnAEe2SWqfCxKzUxA" targetNamespace="http://tns.tibco.com/bw/composite/MainSystemIMP" name="MainSystemIMP" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_ii_hYFnAEe2SWqfCxKzUxA" name="mainframesystem" promote="ComponentMainSystemIMP/mainframesystem">
+    <sca:interface.wsdl xmi:id="_ijIrUFnAEe2SWqfCxKzUxA" interface="http://xmlns.example.com/20221101140630PLT#wsdl.interface(mainframesystem)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemIMP.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_ijposFnAEe2SWqfCxKzUxA" name="RestService" path="/mainframesystem" docBasePath="http://localhost:7777/MainSystemIMP" docResourcePath="mainframesystem" basePath="/" connector="mainsystemimp.mainframesystem" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/mainsystemimp.MainSystemIMP-mainframesystem.json">
+      <operation xmi:id="_ikCqQFnAEe2SWqfCxKzUxA" operationName="post" nickname="post-mainframesystem" httpMethod="POST" notes="postMainframesystem" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+        <clientRequestFormat>xml</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_ikYogFnAEe2SWqfCxKzUxA"/>
+      <advancedConfig xmi:id="_ijposVnAEe2SWqfCxKzUxA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_ikCqQVnAEe2SWqfCxKzUxA" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_IoZkMGGuEe2dcaED9OU2IQ" name="emp_professional" promote="ComponentMainSystemSecondProcess/emp_professional">
+    <sca:interface.wsdl xmi:id="_IowJgGGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_professional)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemSecondProcess.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_IpOqoGGuEe2dcaED9OU2IQ" name="RestService1" path="/emp_professional" docBasePath="http://localhost:7777/MainSystemIMP" docResourcePath="emp_professional" basePath="/" connector="mainsystemimp.mainframesystem2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/mainsystemimp.MainSystemSecondProcess-emp_professional.json">
+      <operation xmi:id="_IqU20GGuEe2dcaED9OU2IQ" operationName="post" nickname="post-emp_professional" httpMethod="POST" notes="postEmp_professional" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_IrhwsGGuEe2dcaED9OU2IQ"/>
+      <advancedConfig xmi:id="_IpOqoWGuEe2dcaED9OU2IQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_IqU20WGuEe2dcaED9OU2IQ" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_SxyPAmGuEe2dcaED9OU2IQ" name="emp_personal" promote="ComponentMainSystemSecondProcess/emp_personal">
+    <sca:interface.wsdl xmi:id="_Sxy2EGGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_personal)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemSecondProcess.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_SyW2wGGuEe2dcaED9OU2IQ" name="RestService2" path="/emp_personal" docBasePath="http://localhost:7777/MainSystemIMP" docResourcePath="emp_professional" basePath="/" connector="mainsystemimp.mainframesystem2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/mainsystemimp.MainSystemSecondProcess-emp_professional.json">
+      <operation xmi:id="_SytcEGGuEe2dcaED9OU2IQ" operationName="post" nickname="post-emp_personal" httpMethod="POST" notes="postEmp_professional" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_SzxMAGGuEe2dcaED9OU2IQ"/>
+      <advancedConfig xmi:id="_SyW2wWGuEe2dcaED9OU2IQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_SytcEWGuEe2dcaED9OU2IQ" bindingName="RestService2"/>
+  </sca:service>
+  <sca:service xmi:id="_lRH4ImGuEe2dcaED9OU2IQ" name="emp_address" promote="ComponentMainSystemSecondProcess/emp_address">
+    <sca:interface.wsdl xmi:id="_lRIfMGGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_address)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemSecondProcess.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_lRzNkGGuEe2dcaED9OU2IQ" name="RestService3" path="/emp_address" docBasePath="http://localhost:7777/MainSystemIMP" docResourcePath="emp_professional" basePath="/" connector="mainsystemimp.mainframesystem2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/mainsystemimp.MainSystemSecondProcess-emp_professional.json">
+      <operation xmi:id="_lSYcYGGuEe2dcaED9OU2IQ" operationName="post" nickname="post-emp_address" httpMethod="POST" notes="postEmp_professional" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_lTpnsGGuEe2dcaED9OU2IQ"/>
+      <advancedConfig xmi:id="_lRzNkWGuEe2dcaED9OU2IQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_lSYcYWGuEe2dcaED9OU2IQ" bindingName="RestService3"/>
+  </sca:service>
+  <sca:service xmi:id="_u3_rwmGuEe2dcaED9OU2IQ" name="emp_titlesalary" promote="ComponentMainSystemSecondProcess/emp_titlesalary">
+    <sca:interface.wsdl xmi:id="_u4AS0GGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_titlesalary)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemSecondProcess.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_u43OcGGuEe2dcaED9OU2IQ" name="RestService4" path="/emp_titlesalary" docBasePath="http://localhost:7777/MainSystemIMP" docResourcePath="emp_professional" basePath="/" connector="mainsystemimp.mainframesystem2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/mainsystemimp.MainSystemSecondProcess-emp_professional.json">
+      <operation xmi:id="_u5XkwGGuEe2dcaED9OU2IQ" operationName="post" nickname="post-emp_titlesalary" httpMethod="POST" notes="postEmp_professional" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_u6Y4cGGuEe2dcaED9OU2IQ"/>
+      <advancedConfig xmi:id="_u43OcWGuEe2dcaED9OU2IQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_u5YL0GGuEe2dcaED9OU2IQ" bindingName="RestService4"/>
+  </sca:service>
+  <sca:service xmi:id="_2YH1UmGuEe2dcaED9OU2IQ" name="emp_organizationaldetails" promote="ComponentMainSystemSecondProcess/emp_organizationaldetails">
+    <sca:interface.wsdl xmi:id="_2YIcYGGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_organizationaldetails)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemSecondProcess.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_2ZegMGGuEe2dcaED9OU2IQ" name="RestService5" path="/emp_organizationaldetails" docBasePath="http://localhost:7777/MainSystemIMP" docResourcePath="emp_professional" basePath="/" connector="mainsystemimp.mainframesystem2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/mainsystemimp.MainSystemSecondProcess-emp_professional.json">
+      <operation xmi:id="_2aWC4GGuEe2dcaED9OU2IQ" operationName="post" nickname="post-emp_organizationaldetails" httpMethod="POST" notes="postEmp_professional" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_2bX9oGGuEe2dcaED9OU2IQ"/>
+      <advancedConfig xmi:id="_2ZegMWGuEe2dcaED9OU2IQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_2aWC4WGuEe2dcaED9OU2IQ" bindingName="RestService5"/>
+  </sca:service>
+  <sca:service xmi:id="_AEDvImGvEe2dcaED9OU2IQ" name="empinsurancedetails" promote="ComponentMainSystemSecondProcess/empinsurancedetails">
+    <sca:interface.wsdl xmi:id="_AEE9QGGvEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(empinsurancedetails)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemSecondProcess.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_AFZL4GGvEe2dcaED9OU2IQ" name="RestService6" path="/empinsurancedetails" docBasePath="http://localhost:7777/MainSystemIMP" docResourcePath="emp_professional" basePath="/" connector="mainsystemimp.mainframesystem2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/mainsystemimp.MainSystemSecondProcess-emp_professional.json">
+      <operation xmi:id="_AGYqYGGvEe2dcaED9OU2IQ" operationName="post" nickname="post-empinsurancedetails" httpMethod="POST" notes="postEmp_professional" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_AHbMMGGvEe2dcaED9OU2IQ"/>
+      <advancedConfig xmi:id="_AFZL4WGvEe2dcaED9OU2IQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_AGYqYWGvEe2dcaED9OU2IQ" bindingName="RestService6"/>
+  </sca:service>
+  <sca:service xmi:id="_tjk9kWMOEe2dcaED9OU2IQ" name="emp_AllTableInput" promote="ComponentMainSystemSecondProcess/emp_AllTableInput">
+    <sca:interface.wsdl xmi:id="_tjmLsGMOEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_AllTableInput)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemSecondProcess.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_tkpUkGMOEe2dcaED9OU2IQ" name="RestService7" path="/emp_AllTableInput" docBasePath="http://localhost:7777/MainSystemIMP" docResourcePath="emp_professional" basePath="/" connector="mainsystemimp.mainframesystem2" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/mainsystemimp.MainSystemSecondProcess-emp_professional.json">
+      <operation xmi:id="_tl4qsGMOEe2dcaED9OU2IQ" operationName="post" nickname="post-emp_AllTableInput" httpMethod="POST" notes="postEmp_professional" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_toTskGMOEe2dcaED9OU2IQ"/>
+      <advancedConfig xmi:id="_tkpUkWMOEe2dcaED9OU2IQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_tl4qsWMOEe2dcaED9OU2IQ" bindingName="RestService7"/>
+  </sca:service>
+  <sca:property xmi:id="_T8CfEFnAEe2SWqfCxKzUxA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T8S9wFnAEe2SWqfCxKzUxA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T8kqkFnAEe2SWqfCxKzUxA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T86o0FnAEe2SWqfCxKzUxA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T9ZxAFnAEe2SWqfCxKzUxA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T9xkcFnAEe2SWqfCxKzUxA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T-MbMFnAEe2SWqfCxKzUxA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T-nR8FnAEe2SWqfCxKzUxA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_T_D94FnAEe2SWqfCxKzUxA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Sx1yEF58Ee2hh6uvyNkG9g" name="/HTTP/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_T8zwYF58Ee2hh6uvyNkG9g" name="/HTTP/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_CvaAEGPpEe2OSpHfc_3KnQ" name="/HTTP/Port2" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_SOfYIFnAEe2SWqfCxKzUxA" name="ComponentMainSystemIMP" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_SOfYIVnAEe2SWqfCxKzUxA" processName="mainsystemimp.MainSystemIMP"/>
+    <sca:service xmi:id="_ii6o4FnAEe2SWqfCxKzUxA" name="mainframesystem">
+      <sca:interface.wsdl xmi:id="_ii7P8FnAEe2SWqfCxKzUxA" interface="http://xmlns.example.com/20221101140630PLT#wsdl.interface(mainframesystem)"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_zIXxQGGtEe2dcaED9OU2IQ" name="ComponentMainSystemSecondProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_zIXxQWGtEe2dcaED9OU2IQ" processName="mainsystemimp.MainSystemSecondProcess"/>
+    <sca:service xmi:id="_IoOlEGGuEe2dcaED9OU2IQ" name="emp_professional">
+      <sca:interface.wsdl xmi:id="_IoV50GGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_professional)"/>
+    </sca:service>
+    <sca:service xmi:id="_SxyPAGGuEe2dcaED9OU2IQ" name="emp_personal">
+      <sca:interface.wsdl xmi:id="_SxyPAWGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_personal)"/>
+    </sca:service>
+    <sca:service xmi:id="_lRH4IGGuEe2dcaED9OU2IQ" name="emp_address">
+      <sca:interface.wsdl xmi:id="_lRH4IWGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_address)"/>
+    </sca:service>
+    <sca:service xmi:id="_u3_rwGGuEe2dcaED9OU2IQ" name="emp_titlesalary">
+      <sca:interface.wsdl xmi:id="_u3_rwWGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_titlesalary)"/>
+    </sca:service>
+    <sca:service xmi:id="_2YH1UGGuEe2dcaED9OU2IQ" name="emp_organizationaldetails">
+      <sca:interface.wsdl xmi:id="_2YH1UWGuEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_organizationaldetails)"/>
+    </sca:service>
+    <sca:service xmi:id="_AEDvIGGvEe2dcaED9OU2IQ" name="empinsurancedetails">
+      <sca:interface.wsdl xmi:id="_AEDvIWGvEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(empinsurancedetails)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemSecondProcess.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_tjkWgGMOEe2dcaED9OU2IQ" name="emp_AllTableInput">
+      <sca:interface.wsdl xmi:id="_tjk9kGMOEe2dcaED9OU2IQ" interface="http://xmlns.example.com/20221111161420PLT#wsdl.interface(emp_AllTableInput)" scaext:wsdlLocation="../Processes/mainsystemimp/MainSystemSecondProcess.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

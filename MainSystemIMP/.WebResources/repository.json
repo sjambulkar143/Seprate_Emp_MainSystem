@@ -1,0 +1,17 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/mainsystemimp.MainSystemIMP-mainframesystem.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/mainsystemimp.MainSystemSecondProcess-emp_professional.json",
+            "type": "generated"
+        }
+    ]
+}

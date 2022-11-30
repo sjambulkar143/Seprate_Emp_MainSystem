@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/MainSystemIMP/Service Descriptors/mainsystemimp.MainSystemIMP-mainframesystem.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.EniqueSolutions/EmployeeDetailPOC/MainSystem"
+    },
+    {
+        "jsonSchemaLocation": "/MainSystemIMP/Service Descriptors/mainsystemimp.MainSystemSecondProcess-emp_professional.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.EniqueSolutions/EmployeeDetailPOC/MainSystem"
+    }
+]}

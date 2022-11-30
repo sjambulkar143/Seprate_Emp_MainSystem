@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.EniqueSolutions/Concrete/empaddress" xmlns:tns0="http://www.EniqueSolutions/EmployeeDetailPOC/MainSystem" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="empaddress1" targetNamespace="http://www.EniqueSolutions/Concrete/empaddress">
+  <wsdl:types>
+    <xsd:schema xmlns:tns="http://www.EniqueSolutions/EmployeeDetailPOC/MainSystem" elementFormDefault="qualified" targetNamespace="http://www.EniqueSolutions/EmployeeDetailPOC/MainSystem">
+      <xsd:element name="empinsurancedetailsReq" type="tns:empinsurancedetailsReqType"/>
+      <xsd:complexType name="empinsurancedetailsReqType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="1" name="EMPLOGINID" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="POLICYNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="POLICYNUMBER" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="POLICYTYPE" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CorrelationID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="empinsurancedetailsRes" type="tns:empinsurancedetailsResType"/>
+      <xsd:complexType name="empinsurancedetailsResType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="empensurancedetres" type="tns:empensurancedetresType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="empensurancedetresType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="1" name="EMPID" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="POLICYNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="POLICYNUMBER" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="POLICYTYPE" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="emporganizationdetailsReq" type="tns:emporganizationdetailsReqType"/>
+      <xsd:complexType name="emporganizationdetails">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="1" name="EMPLOGINID" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="COMPANYNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="COMPANYADDRESS" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="COMPANYPHONENUMBER" type="xsd:long"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="COMPANYEMAIL" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ABN" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ACN" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CorrelationID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="emporganizationdetailsReqType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="EmployeeOrgDetailReq" type="tns:emporganizationdetails"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="emporganizationdetailsRes" type="tns:emporganizationdetailsResType"/>
+      <xsd:complexType name="emporganizationdetailsResType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="EmployeeOrgDetailRes" type="tns:emporganizationdetails"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="emptitlereq" type="tns:emptitlereqType"/>
+      <xsd:complexType name="emptitlereqType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="1" name="EMPLOGINID" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPMIDDLENAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPLASTNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="TITLE" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="SALARY" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CorrelationID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="emptitlesal">
+        <xsd:sequence>
+          <xsd:element name="EMPNAME" type="xsd:string"/>
+          <xsd:element name="EMPMIDDLENAME" type="xsd:string"/>
+          <xsd:element name="EMPLASTNAME" type="xsd:string"/>
+          <xsd:element name="EMPID" type="xsd:int"/>
+          <xsd:element name="TITLE" type="xsd:string"/>
+          <xsd:element name="SALARY" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="emptitleres" type="tns:emptitleresType"/>
+      <xsd:complexType name="emptitleresType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="emptileSal" type="tns:emptitlesal"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="empaddressReq" type="tns:empaddresReqType"/>
+      <xsd:complexType name="empaddresReqType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPLOGINID" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="STREET" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CITY" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="STATE" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ZIPCODE" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CorrelationID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="empaddressRes" type="tns:empaddressResType"/>
+      <xsd:complexType name="empaddressResType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="empAddRes" type="tns:EmpadddresssType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EmpadddresssType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPID" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="STREET" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CITY" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="STATE" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ZIPCODE">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:int">
+                <xsd:pattern value="[0-9]{6}"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="EmpPersonalReq" type="tns:EmpPersonalReqType"/>
+      <xsd:complexType name="EmpPersonalReqType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="EmpPersonalreQ" type="tns:EmpPersonaL"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="EmpPersonalRes" type="tns:EmpPersonalResType"/>
+      <xsd:complexType name="EmpPersonalResType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EmpProfessional" type="tns:EmpProfessionalReqMainType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="EmpProfessionalReq" type="tns:EmpProfessionalReqMainType"/>
+      <xsd:complexType name="EmpProfessionalReqType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="1" name="EMPLOGINID" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPMIDDLENAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPLASTNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="DEPARTMENT" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="TITLE" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ADDEDTIME" type="xsd:date"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPSTATUS" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPTYPE" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMAILID" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EXPERIENCE" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ROLE" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CorrelationID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="EmpProfessionalRes" type="tns:EmpProfessionalResType"/>
+      <xsd:complexType name="EmpProfessionalResType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="EmpProfessionalResp" type="tns:EmpProfessionalReqType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EmpProfessionalReqMainType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="EmpProfessionReqMain" type="tns:EmpProfessionalReqType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RestRequest" type="tns:RestRequestType"/>
+      <xsd:complexType name="RestRequestType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="empaddressREQ" type="tns:empaddresReqType"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="empinsurancedetailsREQ" type="tns:empinsurancedetailsReqType"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="empOrganizationDetailREQ" type="tns:emporganizationdetailsReqType"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="empProfessionalREQ" type="tns:EmpPersonalResType"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="empTitleREQ" type="tns:emptitlereqType"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="empPersonalREQ" type="tns:EmpPersonalReqType"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="AllTablesData" type="tns:AllTableFileInputType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RestResponse" type="tns:RestResponseType"/>
+      <xsd:complexType name="RestResponseType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ResMessages" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="EmpPersonaL">
+        <xsd:sequence>
+          <xsd:element name="EMPPERSONALID" type="xsd:int"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPMIDDLENAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="EMPLASTNAME" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="MOBILENUMBER" type="xsd:long"/>
+          <xsd:element name="ALTERNATEMOBILE" type="xsd:long"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="DOB" type="xsd:date"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="AGE" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="MARRIGESTATUS" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="AADHARNUMBER" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="PANNUMBER" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CorrelationID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AllTableFileInput" type="tns:AllTableFileInputType"/>
+      <xsd:complexType name="AllTableFileInputType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="CorrelationID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="NewOperationRequest">
+    <wsdl:part element="tns0:empaddressReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="NewOperationResponse">
+    <wsdl:part element="tns0:RestResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="empaddress">
+    <wsdl:operation name="NewOperation">
+      <wsdl:input message="tns:NewOperationRequest"/>
+      <wsdl:output message="tns:NewOperationResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPServiceBinding" type="tns:empaddress">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="NewOperation">
+      <soap:operation soapAction="NewOperation" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="empaddress1">
+    <wsdl:port binding="tns:SOAPServiceBinding" name="empaddress1SOAP">
+      <soap:address location="http://localhost:2006/SOAPServiceBinding/empaddress1/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

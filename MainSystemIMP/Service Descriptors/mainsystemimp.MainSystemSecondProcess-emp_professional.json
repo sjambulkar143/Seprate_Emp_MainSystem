@@ -1,0 +1,455 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "emp_professional",
+    "description" : "emp_professional service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/emp_organizationaldetails" : {
+      "post" : {
+        "summary" : "postEmp_professional",
+        "description" : "postEmp_professional",
+        "operationId" : "post-emp_organizationaldetails",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/emporganizationdetailsReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a RestResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/emp_personal" : {
+      "post" : {
+        "summary" : "postEmp_professional",
+        "description" : "postEmp_professional",
+        "operationId" : "post-emp_personal",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/EmpPersonalReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a RestResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/empinsurancedetails" : {
+      "post" : {
+        "summary" : "postEmp_professional",
+        "description" : "postEmp_professional",
+        "operationId" : "post-empinsurancedetails",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/empinsurancedetailsReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a RestResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/emp_AllTableInput" : {
+      "post" : {
+        "summary" : "postEmp_professional",
+        "description" : "postEmp_professional",
+        "operationId" : "post-emp_AllTableInput",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/AllTableFileInput"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a RestResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/emp_professional" : {
+      "post" : {
+        "summary" : "postEmp_professional",
+        "description" : "postEmp_professional",
+        "operationId" : "post-emp_professional",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/EmpProfessionalReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a RestResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/emp_titlesalary" : {
+      "post" : {
+        "summary" : "postEmp_professional",
+        "description" : "postEmp_professional",
+        "operationId" : "post-emp_titlesalary",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/emptitlereq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a RestResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    },
+    "/emp_address" : {
+      "post" : {
+        "summary" : "postEmp_professional",
+        "description" : "postEmp_professional",
+        "operationId" : "post-emp_address",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/empaddressReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a RestResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/RestResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "empaddressReq" : {
+      "type" : "object",
+      "properties" : {
+        "EMPLOGINID" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "STREET" : {
+          "type" : "string"
+        },
+        "CITY" : {
+          "type" : "string"
+        },
+        "STATE" : {
+          "type" : "string"
+        },
+        "ZIPCODE" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "CorrelationID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "emporganizationdetailsReq" : {
+      "type" : "object",
+      "properties" : {
+        "EmployeeOrgDetailReq" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EmployeeOrgDetailReq",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "empinsurancedetailsReq" : {
+      "type" : "object",
+      "required" : [ "EMPLOGINID" ],
+      "properties" : {
+        "EMPLOGINID" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "EMPNAME" : {
+          "type" : "string"
+        },
+        "POLICYNAME" : {
+          "type" : "string"
+        },
+        "POLICYNUMBER" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "POLICYTYPE" : {
+          "type" : "string"
+        },
+        "CorrelationID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "AllTableFileInput" : {
+      "type" : "object",
+      "properties" : {
+        "CorrelationID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "emptitlereq" : {
+      "type" : "object",
+      "required" : [ "EMPLOGINID" ],
+      "properties" : {
+        "EMPLOGINID" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "EMPNAME" : {
+          "type" : "string"
+        },
+        "EMPMIDDLENAME" : {
+          "type" : "string"
+        },
+        "EMPLASTNAME" : {
+          "type" : "string"
+        },
+        "TITLE" : {
+          "type" : "string"
+        },
+        "SALARY" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "CorrelationID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EmpProfessionReqMain" : {
+      "type" : "object",
+      "required" : [ "EMPLOGINID" ],
+      "properties" : {
+        "EMPLOGINID" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "EMPNAME" : {
+          "type" : "string"
+        },
+        "EMPMIDDLENAME" : {
+          "type" : "string"
+        },
+        "EMPLASTNAME" : {
+          "type" : "string"
+        },
+        "DEPARTMENT" : {
+          "type" : "string"
+        },
+        "TITLE" : {
+          "type" : "string"
+        },
+        "ADDEDTIME" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "EMPSTATUS" : {
+          "type" : "string"
+        },
+        "EMPTYPE" : {
+          "type" : "string"
+        },
+        "EMAILID" : {
+          "type" : "string"
+        },
+        "EXPERIENCE" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "ROLE" : {
+          "type" : "string"
+        },
+        "CorrelationID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RestResponse" : {
+      "type" : "object",
+      "properties" : {
+        "ResMessages" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EmpPersonalreQ" : {
+      "type" : "object",
+      "required" : [ "ALTERNATEMOBILE", "EMPPERSONALID" ],
+      "properties" : {
+        "EMPPERSONALID" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "EMPNAME" : {
+          "type" : "string"
+        },
+        "EMPMIDDLENAME" : {
+          "type" : "string"
+        },
+        "EMPLASTNAME" : {
+          "type" : "string"
+        },
+        "MOBILENUMBER" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "ALTERNATEMOBILE" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "DOB" : {
+          "type" : "string",
+          "format" : "date"
+        },
+        "AGE" : {
+          "type" : "string"
+        },
+        "MARRIGESTATUS" : {
+          "type" : "string"
+        },
+        "AADHARNUMBER" : {
+          "type" : "string"
+        },
+        "PANNUMBER" : {
+          "type" : "string"
+        },
+        "CorrelationID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "EmpProfessionalReq" : {
+      "type" : "object",
+      "properties" : {
+        "EmpProfessionReqMain" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EmpProfessionReqMain",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "EmpPersonalReq" : {
+      "type" : "object",
+      "properties" : {
+        "EmpPersonalreQ" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/EmpPersonalreQ",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "EmployeeOrgDetailReq" : {
+      "type" : "object",
+      "required" : [ "EMPLOGINID" ],
+      "properties" : {
+        "EMPLOGINID" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "COMPANYNAME" : {
+          "type" : "string"
+        },
+        "COMPANYADDRESS" : {
+          "type" : "string"
+        },
+        "COMPANYPHONENUMBER" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "COMPANYEMAIL" : {
+          "type" : "string"
+        },
+        "ABN" : {
+          "type" : "string"
+        },
+        "ACN" : {
+          "type" : "string"
+        },
+        "CorrelationID" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
